@@ -27,7 +27,9 @@ app.get('/getuser/:id', (req, res) => {
 const createRouter = require('./routes/create');
 app.use('/create', createRouter);
 
-
+//Update Operation
+const updateRouter = require('./routes/update');
+app.use('/update', updateRouter);
 
 
 
