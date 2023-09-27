@@ -23,6 +23,9 @@ app.get('/getuser/:id', (req, res) => {
     .catch((err) => res.json(err));
 });
 
+// Create Operation 
+const createRouter = require('./routes/create');
+app.use('/create', createRouter);
 
 
 
