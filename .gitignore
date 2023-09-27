@@ -1,0 +1,4 @@
+ECHO is on.
+   /crud/node_modules
+   /crud/client/node_modules
+   /crud/server/node_modules
