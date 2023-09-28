@@ -9,14 +9,15 @@ function Users() {
     axios.get("http://localhost:3000")
       .then(result => setUsers(result.data))
       .catch(err => console.log(err));
-  }, []);
+  }, []); // Add an empty dependency array []
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3000/deleteUser/${id}`)
+    axios
+      .delete(`http://localhost:3000/delete/deleteUser/${id}`)
       .then(() => {
-        setUsers(users.filter(user => user._id !== id));
+        setUsers(users.filter((user) => user._id !== id));
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   return (

@@ -31,8 +31,9 @@ app.use('/create', createRouter);
 const updateRouter = require('./routes/update');
 app.use('/update', updateRouter);
 
-
-
+// Delete User Operation
+const deleteRouter = require('./routes/delete');
+app.use('/delete', deleteRouter);
 
 app.listen(3000, () => {
   console.log('Server is running on Port 3000');
